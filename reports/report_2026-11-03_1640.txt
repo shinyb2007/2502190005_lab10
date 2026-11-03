@@ -1,0 +1,38 @@
+====================================================================
+    VILLAGE BOREWELL PUMP TELEMETRY & DECISION REPORT (FINAL)
+====================================================================
+Generated On  : 2026-11-03 16:40:52
+Source Path   : data\sample.txt
+Record Audit  : 14 Valid Processed | 2 Flagged
+--------------------------------------------------------------------
+
+1. ACTIONABLE MAINTENANCE DECISIONS
+--------------------------------------------------------------------
+MOST URGENT PUMP UNIT REQUIRING ATTENTION : PUMP-03
+OVERCURRENT STRESS ALERTS (>16.0 A)       : PUMP-03
+LOW VOLTAGE DIP INCIDENTS (<180 V)        : 0 events
+
+PUMP SERVICE PRIORITY RANKING:
+RANK  PUMP ID       FAILS  WARNS  MEAN I(A)   SCORE        STATUS
+--------------------------------------------------------------------
+1     PUMP-03           1      1      17.65       4  OVERDUE/WARN
+2     PUMP-02           0      0      15.00       0        NORMAL
+3     PUMP-04           0      0      14.50       0        NORMAL
+4     PUMP-01           0      0      14.05       0        NORMAL
+
+2. AGGREGATE SYSTEM METRICS
+------------------------------------
+METRIC                         VALUE
+------------------------------------
+Total Valid Records               14
+System Mean Voltage (V)        211.9
+System Mean Current (A)        15.45
+------------------------------------
+
+3. HARDENED DATA AUDIT · REJECTED ENTRIES
+--------------------------------------------------------------------
+LINE  REASON                              RAW INPUT
+--------------------------------------------------------------------
+9     Malformed syntax: Expected YYYY-MM  2026-10-03|PUMP-03|180|21.0
+13    Physical domain violation: Voltage  2026-10-05|PUMP-01|440|13.8|OK
+====================================================================
